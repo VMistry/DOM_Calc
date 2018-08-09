@@ -5,6 +5,7 @@ var multiplyButton = document.getElementById("multiply");
 var divideButton = document.getElementById("divide");
 var equalButton = document.getElementById("equals");
 var screenEdit = document.getElementById("screen");
+var clearButton = document.getElementById("clear");
 var string = "";
 //Give the computer one operation.
 var number1;
@@ -28,6 +29,8 @@ minusButton.addEventListener("click", minus);
 multiplyButton.addEventListener("click", multiply);
 divideButton.addEventListener("click", divide);
 equalButton.addEventListener("click", equals);
+clearButton.addEventListener("click", clears);
+
 
 function num1(){
   string = string + "1";
@@ -111,9 +114,14 @@ function equals(){
     //Display answer.
     string = number1 / number2;
   }
+
   screenEdit.innerHTML = string;
 }
 
+function clears(){
+  string = "";
+  screenEdit.innerHTML = string;
+}
 
 
 // function operationSelector(number1, operator, number2){
